@@ -11,7 +11,35 @@
             Start()
             
             function Start(){
-                var playerName = prompt("*static* Hello is any one out there? *static*")
+                
+                var playerName = prompt("What is your name?")
+                
+                alert("*radio static* Hello, is any one out there? *STATIC*");
+                
+                alert("*You*  Yes this is Captain " + playerName);
+                
+                alert("*STATIC* we need help, these alien scum have taken us prisoner, they want to teach us, de wey?");
+                
+                
+                var startGame = confirm("*Ship* Captain " + playerName + " will you attempt to a rescue mission");
+                
+                if(startGame){
+                    Mars();
+                }
+                else{
+                        alert("*Ship* You are very selfish piece of crap *You* What, you better watch your language!! or you will be scrapped *Ship* I dont care if I get scrapped, at least I wont be around you any more!!");
+                    }
+            }
+            
+            function Mars(){
+                alert("*Ship* The transmission came from out side the solar system, I am taking you to the city of Cydonia near the Arabia highlands, here you should gather supplies for your Quest.");
+                alert("*Ship* Welcome to Cydonia. This place was popular to study when the early scientists started to look at Mars. now get out and gather supplies");
+                alert("*Your conscience* Dude remember, this is a 3rd world city. They will be watching you because you standout, so be carful. Oh and also there is some emergency money in the back of the ship if you need any. ");
+                
+                
+                        
+                            }
+                
             }
         </script>
     
