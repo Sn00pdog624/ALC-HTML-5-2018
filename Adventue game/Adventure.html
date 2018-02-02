@@ -7,12 +7,18 @@
         <h1>Outer Space v1.0</h1>
         <p>Made by Me: Parker Smith</p>
         <script>
+            var inventory = {
+                Standard_Blaster:1,
+                Upgraded_Blaster:0,
+                MedicalBandages:0,
+                Vile_Of_Poison:0,
+                
+            }
         
+            var playerName = prompt("What is your name?");
             Start()
             
             function Start(){
-                
-                var playerName = prompt("What is your name?")
                 
                 alert("*radio static* Hello, is any one out there? *STATIC*");
                 
@@ -34,13 +40,28 @@
             function Mars(){
                 alert("*Ship* The transmission came from out side the solar system, I am taking you to the city of Cydonia near the Arabia highlands, here you should gather supplies for your Quest.");
                 alert("*Ship* Welcome to Cydonia. This place was popular to study when the early scientists started to look at Mars. now get out and gather supplies");
-                alert("*Your conscience* Dude remember, this is a 3rd world city. They will be watching you because you standout, so be carful. Oh and also there is some emergency money in the back of the ship if you need any. ");
+                alert("*Your conscience* Dude remember, this is a 3rd world city. They will be watching you because you standout, so be carful, these people won. Oh and also there is some emergency money in the back of the ship if you need any. ");
+                prompt("You are standing in front of your ship, you have the local bar outside the hanger and the Market is down the steet. The other shops are Scrapper's Space Junk Repair, Medical Tower, and Zard's Shop of Wizard magic potions.").toLowerCase;
+                
+                
+                switch(Mars){
+            
+                    case "scrapper's":
+                        prompt("*the Scrapper* Welcome to My Space Junk repair. We can Repair your Blaster or if you have enough Blaster parts I can give you an upgrade.");
+                        break;
+                    case "scrappers":
+                        prompt("*the Scrapper* Welcome to My Space Junk repair. We can Repair your Blaster or if you have enough Blaster parts I can give you an upgrade.");
+                        break;
+                    case "medical tower":
+                        prompt("*Nurse*");
+                        
+                           }
                 
                 
                         
                             }
                 
-            }
+            
         </script>
     
     
