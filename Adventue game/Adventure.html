@@ -9,16 +9,19 @@
         <script>
             
             var inventory = {
-                Standard_Blaster:1,
-                Blaster_parts:9,
-                Upgraded_Blaster:0,
+                LV1_Blaster:1,
+                LV2_Blaster:0,
+                LV3_Blaster:0,
+                Blaster_parts:15,
                 MedicalBandages:0,
                 Vile_Of_Poison:0,
                 Syringe:0,
                 Grams_Of_Cocaine:0,
                 
             }
-        
+        var invList = function(){
+            alert("Blaster")
+        }
             var playerName = prompt("What is your name?");
             Start()
             
@@ -26,7 +29,7 @@
                 
                 alert("*radio static* Hello, is any one out there? *STATIC*");
                 
-                alert("*You*  Yes this is Captain " + playerName);
+                alert("*You*  Yes this is Commander " + playerName + "Smith");
                 
                 alert("*STATIC* we need help, these alien scum have taken us prisoner, they want to teach us, de wey?");
                 
@@ -43,7 +46,7 @@
             
             
             function Mars(){
-                var Market = prompt("You are standing in front of your ship, you have the local bar outside the hanger full of idiot drinkers. The Market is down the street Scrappers Space Junk Repair, Medical Tower, and Zard's Shop of Wizard magic potions.").toLowerCase();
+                var Market = prompt("You are standing in front the entrace to the local Market, you have the local bar down the street full of idiot drinkers. The market has Scrappers Space Junk Repair, Medical Tower, and Zard's Shop of Wizard magic potions. where do you want to go.").toLowerCase();
                 
                     switch(Market){
                         case "scrappers":
@@ -51,25 +54,37 @@
                     
                     if(scrappers == "repair blaster" && inventory.Blaster_parts >= 10){
                         inventory.Blaster_parts = inventory.Blaster_parts - 10;
-                        inventory.Standard_Blaster++;
-                        alert("You've Repaired your Blaster! \n Blaster = " + inventory.Standard_Blaster + "\n Blaster Parts = " + inventory.Blaster_parts);
+                        inventory.LV1_Blaster++;
+                        alert("You've Repaired your Blaster! \n Blaster = " + inventory.LV1_Blaster + "\n Blaster Parts = " + inventory.Blaster_parts);
                     }
-                    else{
-                        alert("You do not have enough parts! Go away!");
+                    else if(scrappers == "repair blaster" && inventory.Blaster_parts >= 15 && inventory.LV2_Blaster){
+                        inventory.Blaster_parts = inventory.Blaster_parts - 10;
+                        inventory.LV2_Blaster++;
+                        alert("You've Repaired your LVL 2 Blaster! \n Blaster = " + inventory.LV2_Blaster + "\n Blaster Parts = " + inventory.Blaster_parts);
+                    }
+                    
+                    else if(scrappers == "upgrade blaster" && inventory.LV1_Blaster >= 1 && inventory.Blaster_parts >= 15){
+                        inventory.Blaster_parts = inventory.Blaster_parts - 15;
+                        inventory.Upgraded_Blaster++;
+                        alert("You have upgraded your blaster! You can now shoot twice in one turn and do more damage. \n Blaster Parts = " + inventory.Blaster_parts);
+                    }
+                    else {
+                        alert("You do not have enough stuff! Now off with you!");
                     break;
                     }
-                        case "medical tower":
+                        case "medical tower" || "tower":
                             alert("*a gental voice of the Nurse* Welcome to the medical tower. Here we can get you medical supplies along with antidotes for poisons and potions");
                             
-                            var Medical = prompt("So what can I get for you \n  - Medical Supplies \n  - Antidotes \n  - potions") 
+                            var Medical = prompt("*a gental voice of the Nurse* Welcome to the medical tower. Here we can get you medical supplies along with antidotes for poisons and potions \n \n So what can I get for you \n  - Medical Supplies \n  - Antidotes \n  - potions") 
                            
-                                 }
+                                 
             
        
                 
                 
                         
                             }
+            }
                 
             
         </script>
