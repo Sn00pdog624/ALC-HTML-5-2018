@@ -1,4 +1,3 @@
-
 var modal = document.getElementById("modal");
 
 var changeBtn = document.getElementById("change");
